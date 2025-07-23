@@ -1,0 +1,123 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(#1a002b, #2e004f);
+    color: white;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+nav .logo {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00ffff;
+}
+
+.hero {
+    height: 100vh;
+    background: url('https://i.imgur.com/V8Y8gWr.png') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(26, 0, 43, 0.8);
+    z-index: -1;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    color: #FFD700;
+    animation: pulse 3s infinite;
+}
+
+.hero-content p {
+    font-size: 1.5em;
+    margin: 20px 0;
+    color: #00ffff;
+}
+
+.btn {
+    padding: 15px 30px;
+    background: #6a0dad;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 1.2em;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #8b00ff;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1a002b;
+    color: #aaa;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        text-shadow: 0 0 10px #FFD700;
+    }
+    50% {
+        text-shadow: 0 0 20px #FFD700, 0 0 30px #FFD700;
+    }
+}
+
+canvas#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
